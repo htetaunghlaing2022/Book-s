@@ -22,44 +22,16 @@ window.addEventListener("scroll", function(){
 //     })
 // })
 
-const proMC=document.querySelectorAll('.product-main-container');
-const productContainer = proMC.querySelectorAll('.product-container')[0];
-const arrowIcons = document.querySelectorAll(".btn button");
 
- let productContainerWidth = productContainer.clientWidth ;
+ const toggleBtn=document.querySelector('.toogle-btn'),
+        navUl=document.querySelector('nav ul'),
+        toggleBtnIcon=document.querySelector('.toogle-btn i');
+         
+        toggleBtn.onclick=function(){
+            navUl.classList.toggle('open');
+            const isOpen=navUl.classList.contains('open');
 
- arrowIcons.forEach(icon => {
-    icon.addEventListener("click", ()=>{
-        proMC.scrollLeft += icon.id == "left" ? -productContainerWidth : productContainerWidth;
-    });
- });
-
-
- const nav=document.querySelector('nav');
- const navUl=document.querySelector('nav ul');
-
-//  window.addEventListener(function(){
-//     window.
-//  })
-
-window.addEventListener("scroll", function () {
-    if (window.scrollY >= 650) {
-        nav.style.backgroundColor = "#ddd";
-    } else {
-        nav.style.backgroundColor = "";
-    }
-
-    // if(window.scrollY >=850) {
-    //     up.classList.add("active");
-    // } else {
-    //     up.classList.remove("active");
-    // }
-
-    // if(window.scrollY >=850) up.classList.add("active");
-    // else up.classList.remove("active");
-
-    // condition ? true : false
-
-    window.scrollY >=850 ? up.classList.add("active") : up.classList.remove("active");
-    
-})
+            toggleBtnIcon.classList= isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }

@@ -39,22 +39,23 @@ header{
 /* navbar */
 nav{
     width: 100%;
-    background-color: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    border: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding:0 30px;
+    padding:10px 30px;
     align-items: center;
     position: fixed;
     transition: 0.6s;
-    padding: 20px 100px;
     z-index: 100000;
 
 }
 
 nav.sticky{
     padding: 5px 100px;
-    background: #800080;
+    background: rgb(128, 0, 128);
 }
 
 nav ul{
@@ -62,7 +63,7 @@ nav ul{
 }
 
 nav ul li{
-    padding: 30px;
+    padding: 10px 20px;
     list-style: none;
 }
 
@@ -89,9 +90,9 @@ nav .toogle-btn{
 }
 
 .banner-content{
-    width: 1000px;
+    width: 800px;
     text-align: center;
-    padding:50px 20px;
+    padding:20px;
     margin: 10px;
     background-color: rgb(225, 225, 225,0.1); 
     backdrop-filter: blur(3px);
@@ -111,9 +112,9 @@ nav .toogle-btn{
 }
 
 .banner-content .btn button  {
-    padding: 20px 0;
+    padding: 20px ;
     border-radius: 10px;
-    background-color: purple;
+    background-color: #800080;
     cursor: pointer;
     border: none;
     transition: all 0.2s ;
@@ -126,14 +127,13 @@ nav .toogle-btn{
 }
 
 .banner-content .btn div{
-   margin: 10px;
+   margin: 0 10px;
 }
 
 .banner-content .btn button a {
-    padding: 20px 30px;
     text-decoration: none;
     color: #ffd;
-    font-size: 1rem;
+    font-size: 15px;
 }
 
 .banner-content .btn button a:hover{
@@ -141,10 +141,10 @@ nav .toogle-btn{
 }
 
 .banner-content .btn .regi-btn a{
-    padding: 20px 30px;
+    padding: 15px;
     text-decoration: none;
     color: #000;
-    font-size: 1rem;
+    font-size: 15px;
     border: 2px solid purple;
     border-radius: 10px;
     transition: all 0.2s;
@@ -169,10 +169,10 @@ nav .toogle-btn{
     border: 2px solid purple;
     backdrop-filter: blur(3px);
     color: #ffd;
-    font-size: 1.5rem;
-    padding: 1rem;
     border-radius: 10px;
     display: block;
+    font-size: 1rem;
+    padding: 1rem;
     margin: 0.5rem 0;
     text-align: center;
     transition: all 0.5s;
@@ -187,234 +187,12 @@ nav .toogle-btn{
 }
 
 /* categories */
-/* .b1{
-    padding: 20px 0;
-    background-color: aliceblue;
-}
-
-.categories {
-    position: relative;
-    padding: 30px 50px;
-    display:grid;
-    row-gap: 50px;
-}
-
-.categories section .pre-btn,
-.categories section .nxt-btn{
-    position: absolute;
-    width: 10vw;
-    height: 100%;
-    top: 0;
-    font-size: 1.5rem;
-    opacity: 0.2;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9;
-}
-
-.categories section .pre-btn:hover,
-.categories section .nxt-btn:hover{
-    opacity: 1;
-}
-
-.categories section .btn .pre-btn{
-    left: 0;
-    background:  linear-gradient(270deg, rgba(225,225,225,0)0%,#fff 100%);
-
-}
-
-.categories section .btn .nxt-btn{
-    right: 0;
-    background:  linear-gradient(90deg, rgba(225,225,225,0)0%,#fff 100%);
-}
-
-.product-category{
-   width: 100%;
-   padding: 20px 50px 10px 50px;
-   margin-bottom: 10px;
-   position: relative;
-}
-
-.product-category:after{
-    content: "";
-    width: 93%;
-    height: 2px;
-    background-color: #000;
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.product-main-container{
-    display: flex;
-    justify-content: space-between;
-    scroll-behavior: smooth;
-    gap: 50px;
-}
-
-.product-main-container::-webkit-scrollbar{
-    display: none;
-}
-
-.product-container{
-    width: 200px;
-    display: inline-block;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.product-img{
-    height: 200px;
-    width: 100%;
-}
-.product-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translateY(-10%);
-}
-
-.product-img .discont-tag{
-    left: 70%;
-    top: 10%;
-    color: #800080;
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
-    background-color: rgba(225, 225, 225, 0.603);
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 10;
-    padding: 10px;
-}
-
-.product-info{
-    padding:5px 10px 5px 10px;
-}
-
-.product-info .product-brand{
-    margin:5px 0;
-}
-
-.product-info .p-m-c{
-    align-items: center;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.product-info .p-m-c .actual-price{
-    font-size: small;
-    color: rgba(109, 109, 109, 0.671);
-    text-decoration: line-through;
-
-}
-
-.product-info .p-m-c button{
-    letter-spacing: 0;
-    padding:10px 5px;
-    border: 1px solid #800080ea ;
-    background-color: transparent;
-    border-radius: 10px;
-    transition: all 0.3s;
-}
-
-.product-info .p-m-c button:hover{
-    color: rgba(255, 255, 255, 0.904);
-    background-color: #800080;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
-} */
-
-
-
-/* categories */
-/* .b1{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.cat1 {
-    margin-left: -99.5px;
-    margin-right: -99.5px;
-    padding-left: 99.5px;
-    padding-right: 99.5px;
-    border-left: 0px;
-    border-right: 0px;
-}
-
-.b1-row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.col-md-12{
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.b1 ul li {
-    list-style: none;
-    position: relative;
-    margin-bottom: 2em;
-    padding: 10px;
-    overflow: hidden;
-    min-width: 165px!important;
-    max-width: 165px!important;
-}
-.b1 img{
-    height: 195px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-@media(min-width: 1200px){
-    .b1{
-        max-width: 1140px;
-    }
-}
-
-@media (min-width: 992px){
-    .b1{
-    max-width: 960px;
-    }
-}
-
-@media (min-width: 992px){
-    .b1{
-    max-width: 720px;
-    }
-}
-
-@media (min-width: 992px){
-    .b1{
-    max-width: 540px;
-    }
-} */
-
-
-/* categories */
 
 
 .b1{
     padding: 45px 0;
     background-color: aliceblue;
 }
-
-/* .p-container{
-    margin: 0 100px auto;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-} */
 
 .coloum{
     margin: 30px;
@@ -587,8 +365,8 @@ nav .toogle-btn{
 .author .a-img{
     padding: 0 0 15px;
     position: relative;
-    width: 25%;
-    height: 25%;
+    width: 35%;
+    height: 35%;
     overflow: hidden;
 }
 .author img{
@@ -724,8 +502,11 @@ footer#footer{
 }
 
 @media (max-width:1280px){
+    nav h1{
+    padding: 10px 0;
+    }
     .banner-social{
-        top: 80%;
+        top: 90%;
         width: 100%;
         left: 0;
         display: flex;
@@ -734,12 +515,11 @@ footer#footer{
     }
     .banner-social a{
         display: inline-block;
-        padding: 20px;
         margin: 0px 5px;
     }
     .banner-social a:hover{
         transform: translateX(0);
-       }
+    }
 }
 
 @media (min-width:1200px){
@@ -760,17 +540,17 @@ footer#footer{
         display: block;
     }
     nav ul{
+        display: none;
         width: 100%;
+        border-radius: 20px;
         justify-content: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        transition: all 0.5s;
+    }
+    nav ul.open{
         display: flex;
-    }
-    nav ul a{
-        display: block;
-        justify-content: center;
-        width: 100%;
-    }
-    .banner-content{
-        width: 800px;
+        margin: 0px 0px 10px 0px;
     }
     .coloum{
         margin: 20px;
@@ -785,6 +565,10 @@ footer#footer{
   }
 
 @media (max-width:992px){
+    nav.sticky{
+        padding: 5px 50px;
+
+    }
     .banner-content{
         width: 650px;
     }
@@ -807,6 +591,13 @@ footer#footer{
 }
 
 @media (max-width:780px){
+    nav.sticky{
+        padding: 5px 20px;
+    }
+    .banner-content{
+        width: 500px;
+        padding: 0px 20px;
+    }
      .products li{
         width: 30%;
      }
@@ -816,6 +607,22 @@ footer#footer{
 }
 
 @media (max-width:576px){
+    ul.open li{
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        margin-bottom: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+     nav ul.open {
+        display: block;
+        background: none;
+        backdrop-filter: none   ;
+    }
+    .banner-social a{
+        /* font-size: 1.2rem; */
+        padding: 0.5rem;
+    }
     .products li{
         width: 35%;
      }
@@ -831,6 +638,13 @@ footer#footer{
 }
 
 @media (max-width:450px){
+    .banner-content .btn{
+        padding: 10px 0;
+    }
+    .banner-content h1{
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
     .author li{
         width: 100%;
     }
@@ -843,11 +657,50 @@ footer#footer{
 }
 
 @media (max-width:380px){
-    
+    .banner-content{
+        padding: 0px 5px;
+    }
+    .container{
+        padding-right: 30px;
+        padding-left: 30px
+    }
     .products li{
         width: 45%;
     }
     .title h1{
         width: 30%;
      }
+     .f-container .panal-iner-container {
+        padding: 0px 50px;
+     }
+}
+
+@media (max-width:325px){
+    .banner-content{
+        height: 55vh;
+    }
+    .banner-content h1{
+        padding-top: 10px;
+    }
+    .banner-content .para{
+        letter-spacing: 0;
+    }
+    .banner-content .btn .login{
+        padding: 12px;
+    }
+    .banner-content .btn .regi-btn a{
+        padding: 10px;
+    }
+    .products li{
+        width: 100%;
+    }
+    .title h1{
+        width: 40%;
+     }
+}
+
+@media (max-width:280px){
+    nav h1{
+        font-size: 20px;
+    }
 }
